@@ -53,7 +53,7 @@ public class MovieRepository {
 				+ "‘나폴레옹’의 야망은 ‘조제핀’과 끝없이 충돌하는데… 세상을 정복한 영웅 아무것도 갖지 못한 황제, ‘나폴레옹’의 대서사가 펼쳐진다!");
 		m2.setArr("15.4%");
 		
-		Movie m3 = new Movie("M1236", "그대들 어떻게 살 것인가");
+		Movie m3 = new Movie("M1236", "그대들은 어떻게 살 것인가");
 		m3.setFilename("M1236.png");
 		m3.setReleaseDate("2023.12.16");
 		m3.setTimeAndAge("1시간30분/12세 이용가");

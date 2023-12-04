@@ -1,3 +1,3 @@
 <footer class="container">
-	<p>&copy; WebMovie</p>
+	<p>&copy; SoongsilFilm</p>
 </footer>
