@@ -13,7 +13,6 @@ public class Movie implements Serializable{
 	private String timeAndAge;
 	private String releaseDate;
 	private String arr;
-
 	private int quantity;
 	
 	public Movie() {

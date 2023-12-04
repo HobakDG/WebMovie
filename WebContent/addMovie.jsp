@@ -5,20 +5,65 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script type="text/javascript" src="./resources/js/validation.js"></script>
 <title>영화 등록</title>
+<style>
+        body {
+            background-color: #fff; /* Set the background color to pitch black */
+        	font-family: 'Arial', sans-serif;
+        	
+        }
+
+        .navbar-dark {
+            background-color: #000 !important; /* Set the background color of the navbar to pitch black */
+        }
+
+        .jumbotron {
+            background-color: #000; /* Set the background color of the jumbotron to pitch black */
+            color: #fff; /* Set the text color to white */
+            padding: 20px;
+        }
+        
+        .jumbotron-text {
+            color: #000; /* Set the text color under Movie site에 오신 것을 환영합니다 to black */
+            padding: 20px;
+        }
+
+        .text-center {
+            color: #000; /* Set the text color of the text-center to white */
+        }
+        /* Add style for the white lines */
+        .section-divider {
+            border-top: 0.5px solid #808080;
+        }
+
+        
+    </style>
 </head>
 <body>
 	<fmt:setLocale value='<%= request.getParameter("language") %>'/>
 	<fmt:bundle basename="bundle.message">
-	<jsp:include page="menu.jsp" />
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3"><fmt:message key="title" /></h1>
-		</div>
+	
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+	    <div class="container d-flex align-items-center">
+	        <div class="ml-auto">
+	        	<a class="navbar-brand" href="logout.jsp">로그아웃</a>
+	        </div>
+	    </div>
+	</nav>
+	<!-- Add white line under the menu -->
+	<div class="section-divider"></div>
+
+	
+	<div class="jumbotron" style="padding: 0px;">
+	    <div class="container" style="padding: 20px;">
+	        <h1 class="display-3" style="font-size: 48px; margin-left: -16px;">
+	            <fmt:message key="title" /></h1>
+	        </h1>
+	    </div>
 	</div>
+	
 	<div class="container">
 		<div class="text-right">
 			<a href="?language=ko" >Korean</a> | <a href="?language=en" >English</a>
-			<a href="logout.jsp" class="btn btn-sm btn-success pull-right">logout</a>
 		</div>
 		<form name="newMovie" action="./processAddMovie.jsp" 
 		class="form-horizontal" method="post" enctype="multipart/form-data">

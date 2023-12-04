@@ -7,16 +7,41 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+	
+		body {
+            background-color: #fff; /* Set the background color to pitch black */
+        	font-family: 'Arial', sans-serif;
+        	
+        }
+       .jumbotron {
+            background-color: #000; /* Set the background color of the jumbotron to pitch black */
+            color: #fff; /* Set the text color to white */
+            padding: 20px;
+        }
+        .jumbotron-text {
+            color: #000; /* Set the text color under Movie site에 오신 것을 환영합니다 to black */
+            padding: 20px;
+        }
+        .navbar-dark {
+        	background-color: #000 !important; /* Set the background color of the navbar to pitch black */
+        }
+        /* Add style for the white lines */
+        .section-divider {
+            border-top: 0.5px solid #808080;
+        }
+	</style>
 <title>영화 목록</title>
 </head>
 <body>
-
-	<div class="jumbotron" style = "height: 20%; background-color: green;">
-		<div class="container">
-			<h1 class="display-3"><b>MOVIE CHART</b></h1>
-		</div>
-			<jsp:include page="menu.jsp" />
+	<%@include file="menu.jsp" %>
+	<div class="jumbotron" style="padding: 0px;">
+	    <div class="container" style="padding: 20px;">
+	        <h1 class="display-3" style="font-size: 48px; color: white; margin-left: -5px;">
+	        	<b>Movie Chart</b></h1>
+	    </div>
 	</div>
+
 	<%
 		MovieRepository dao = MovieRepository.getInstance();
 		ArrayList<Movie> listOfMovies = dao.getAllMovies();
@@ -41,7 +66,7 @@
 					<div class="col-md-2">
 					<p> <a href="./movie.jsp?id=<%=movie.getMovieId()%>"					
 					class = "btn btn-secondary" role="button">상세정보></a>
-					<p> <a href="./reservation.jsp?id=<%=movie.getMovieId()%>"					
+					<p> <a href="./reservation.jsp?Mname=<%=movie.getMname()%>&Filename=<%=movie.getFilename()%>"					
 					class = "btn btn-secondary" role="button">예매하기></a>
 					</div>
 					</div>	
