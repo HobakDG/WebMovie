@@ -7,9 +7,9 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-
+	String realPath = application.getRealPath("C:/Users/cil12/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/WebMovie/resources/image");
 	String filename= "";
-	String realFolder = "C:\\Users\\cil12\\eclipse-workspace\\WebMovie\\WebContent\\resources\\images";
+	String realFolder = "C:\\upload";
 	int maxSize = 5*1024*1024;
 	String encType = "utf-8";
 	
@@ -24,19 +24,18 @@
 	String timeAndAge = multi.getParameter("timeAndAge");
 
 	Enumeration files = multi.getFileNames();
-	String fname = (String) files.nextElement();
-	String fileName = multi.getFilesystemName(fname);
-	
+	String fname = (String)files.nextElement();
+	String fileName = multi.getOriginalFileName(fname);
 	MovieRepository dao = MovieRepository.getInstance();
 	
-	Movie newMovie = new Movie();
+	Movie newMovie = new Movie(movieId,name);
 	newMovie.setMovieId(movieId);
 	newMovie.setMname(name);
 	newMovie.setDescription(description);
 	newMovie.setArr(arr);
 	newMovie.setReleaseDate(releaseDate);
 	newMovie.setTimeAndAge(timeAndAge);
-	newMovie.setFilename(filename);
+	newMovie.setFilename(fileName);
 	
 	dao.addMovie(newMovie);
 	

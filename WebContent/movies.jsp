@@ -45,6 +45,7 @@
 	<%
 		MovieRepository dao = MovieRepository.getInstance();
 		ArrayList<Movie> listOfMovies = dao.getAllMovies();
+		String realPath = application.getRealPath("/resources/image");
 	%>
 	<div class="container">
 		<div class="row" align="center">
