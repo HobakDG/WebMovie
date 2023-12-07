@@ -45,9 +45,10 @@
 			</div>
 			<div class="col-md-6">
 				<h3><b><%=movie.getMname()%></b></h3>
-				<p><%=movie.getDescription()%>
-				<p><b>상영시간 / 관람등급 : </b><%=movie.getTimeAndAge()%>
-				<p><b>개봉일 : </b><%=movie.getReleaseDate()%>
+				<p><b><%=movie.getDescription()%></b>
+				<p><b>상영시간 / 관람등급 : <%=movie.getTimeAndAge()%></b>
+				<p><b>개봉일 : <%=movie.getReleaseDate()%></b><br>
+				<br><h7 style="font-family: Arial;"><b>예매율 : <%=movie.getArr()%></b></h7>
 				<p> <a href="./reservation.jsp?Mname=<%=movie.getMname()%>&Filename=<%=movie.getFilename()%>"					
 					class = "btn btn-secondary" role="button">예매하기></a>
 				</div>

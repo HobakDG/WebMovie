@@ -11,7 +11,7 @@
 	
 		body {
             background-color: #fff; /* Set the background color to pitch black */
-        	font-family: 'Arial', sans-serif;
+        	font-family: 'luminari', fantasy;
         	
         }
        .jumbotron {
@@ -45,7 +45,6 @@
 	<%
 		MovieRepository dao = MovieRepository.getInstance();
 		ArrayList<Movie> listOfMovies = dao.getAllMovies();
-		String realPath = application.getRealPath("/resources/image");
 	%>
 	<div class="container">
 		<div class="row" align="center">
@@ -59,16 +58,16 @@
 					<p></p>
 					<div class="row" align="left">
 						<div class="col-md-8">
-							<h3><%=movie.getMname()%></h3>
-							<h7><%=movie.getTimeAndAge()%></h7>
-							<p><%=movie.getReleaseDate()%>
+							<h3><b><%=movie.getMname()%></b></h3>
+							<h7 style="font-family: Arial;"><b><%=movie.getReleaseDate()%> 개봉</b></h7><br>
+							<h7 style="font-family: Arial;"><b>예매율 : <%=movie.getArr()%></b></h7>
 						</div>
 					<div class="row" align="right">
 					<div class="col-md-2">
 					<p> <a href="./movie.jsp?id=<%=movie.getMovieId()%>"					
-					class = "btn btn-secondary" role="button">상세정보></a>
+					class = "btn btn-secondary" role="button"><b>상세정보</b>></a>
 					<p> <a href="./reservation.jsp?Mname=<%=movie.getMname()%>&Filename=<%=movie.getFilename()%>"					
-					class = "btn btn-secondary" role="button">예매하기></a>
+					class = "btn btn-secondary" role="button"><b>예매하기></b></a>
 					</div>
 					</div>	
 					</div>

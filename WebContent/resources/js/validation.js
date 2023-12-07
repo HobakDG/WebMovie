@@ -7,8 +7,8 @@ function CheckAddMovie(){
 	"[상풍 코드]\nM와 숫자를 조합하여 5~12자까지 입력하세요\n첫 글자는 반드시 M로 시작하세요"))
 	return false;
 		
-	if(mname.value.length<4||mname.value.length>12){
-		alert("[상품명]\n최소 4자에서 최대 12자까지 입력하세요");
+	if(mname.value.length<1){
+		alert("[영화 이름]\n최소 1자 이상 입력하세요");
 		mname.select();
 		mname.focus();
 		return false;

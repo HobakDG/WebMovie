@@ -7,13 +7,12 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-	String realPath = application.getRealPath("C:/Users/cil12/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/WebMovie/resources/image");
 	String filename= "";
-	String realFolder = "C:\\upload";
 	int maxSize = 5*1024*1024;
 	String encType = "utf-8";
+	String realPath = getServletContext().getRealPath("./resources/images");
 	
-	MultipartRequest multi = new MultipartRequest(request, realFolder, 
+	MultipartRequest multi = new MultipartRequest(request, realPath, 
 			maxSize, encType, new DefaultFileRenamePolicy());
 	
 	String movieId = multi.getParameter("movieId");

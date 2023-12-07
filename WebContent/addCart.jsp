@@ -12,8 +12,8 @@
 	
 	MovieRepository dao = MovieRepository.getInstance();
 	
-	Movie Movie = dao.getMovieById(id);
-	if (Movie == null) {
+	Movie movie = dao.getMovieById(id);
+	if (movie == null) {
 		response.sendRedirect("exceptionNoMovieId.jsp");
 	}
 	
