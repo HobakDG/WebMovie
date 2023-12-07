@@ -46,6 +46,8 @@
 			<div class="col-md-6">
 				<h3><b><%=movie.getMname()%></b></h3>
 				<p><b><%=movie.getDescription()%></b>
+				<p><b>감독 : <%=movie.getDirector()%></b>
+				<p><b>배우 : <%=movie.getActor() %></b>
 				<p><b>상영시간 / 관람등급 : <%=movie.getTimeAndAge()%></b>
 				<p><b>개봉일 : <%=movie.getReleaseDate()%></b><br>
 				<br><h7 style="font-family: Arial;"><b>예매율 : <%=movie.getArr()%></b></h7>

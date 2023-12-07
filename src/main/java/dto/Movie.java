@@ -13,6 +13,9 @@ public class Movie implements Serializable{
 	private String timeAndAge;
 	private String releaseDate;
 	private String arr;
+	private String director;
+	private String actor;
+
 	private int quantity;
 	
 	public Movie() {
@@ -86,6 +89,22 @@ public class Movie implements Serializable{
 
 	public void setReleaseDate(String releaseDate) {
 		this.releaseDate = releaseDate;
+	}
+	
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public String getActor() {
+		return actor;
+	}
+
+	public void setActor(String actor) {
+		this.actor = actor;
 	}
 	
 }

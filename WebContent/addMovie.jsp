@@ -86,6 +86,18 @@
 				</div>
 			</div>
 			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="director" /></label>
+				<div class="col-sm-3">
+					<input type="text" id="director" name="director" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="actor" /></label>
+				<div class="col-sm-3">
+					<input type="text" id="actor" name="actor" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
 				<label class="col-sm-2"><fmt:message key="timeAndAge" />
 				</label>
 				<div class="col-sm-5">

@@ -21,6 +21,8 @@
 	String arr = multi.getParameter("arr");
 	String releaseDate = multi.getParameter("releaseDate");
 	String timeAndAge = multi.getParameter("timeAndAge");
+	String director = multi.getParameter("director");
+	String actor = multi.getParameter("actor");
 
 	Enumeration files = multi.getFileNames();
 	String fname = (String)files.nextElement();
@@ -35,6 +37,8 @@
 	newMovie.setReleaseDate(releaseDate);
 	newMovie.setTimeAndAge(timeAndAge);
 	newMovie.setFilename(fileName);
+	newMovie.setDirector(director);
+	newMovie.setActor(actor);
 	
 	dao.addMovie(newMovie);
 	
