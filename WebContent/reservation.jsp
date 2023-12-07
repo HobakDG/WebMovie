@@ -7,6 +7,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <title>예약하기</title>
     <style>
     	body {
@@ -98,7 +99,15 @@
     </script>
 </head>
 <body>
+
 	<jsp:include page="menu.jsp" />
+	<% 
+        // Retrieve values from the URL
+        String Mname = request.getParameter("Mname");
+        String Filename = request.getParameter("Filename");
+
+        // Use the retrieved values as needed
+    %>
     <div class="jumbotron" style="padding: 0px;">
 	    <div class="container" style="padding: 20px;">
 	        <h1 class="display-3" style="font-size: 48px; color: white; margin-left: -5px;">
@@ -184,6 +193,8 @@
 				    <input type="hidden" id="theaterHidden" name="theater" value="">
 				    <input type="hidden" id="dateHidden" name="date" value="">
 				    <input type="hidden" id="timeHidden" name="time" value="">
+				    <input type="hidden" name="Mname" value="<%= Mname %>">
+        			<input type="hidden" name="Filename" value="<%= Filename %>">
 				    
 				    <!-- 예약하기 버튼 -->
 					<button type="button" class="btn btn-primary btn-lg btn-block" onclick="validateAndNavigate('seatSelection.jsp');">예약하기</button>
