@@ -4,7 +4,6 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="welcome.jsp">메인</a>
             <a class="navbar-brand" href="movies.jsp">영화</a>
-            <a class="navbar-brand" href="cart.jsp">장바구니</a>
         </div>
         <div class="ml-auto">
             <a class="navbar-brand" href="addMovie.jsp">로그인</a>
